@@ -1,0 +1,45 @@
+body{
+    background-color: #ACE1AF;
+    
+}
+
+.card-flora{
+   display:flex;
+   flex-direction:row;
+   position: relative;
+   text-align: center;
+   width: 100%;
+   align-items: center;
+   font-size: 10px;
+   height: auto;
+   transform: translateX(15%); /** move horizontalmente tudo tipo o right*/
+   font-family:'Ope Sans',sans-serif;
+   
+}
+.imagem-logo{
+   height: 50px;
+}
+.verde_IFMG{
+   color:#4A5D23;
+}
+#nada_de_linha{
+   text-decoration: none;
+}
+footer{
+  
+   background-color:#4A5D23;
+   width: 440px;
+   height:107px; 
+   position:fixed;
+   top:971px;
+}
+.caixa_rodape{
+   margin:auto;
+   text-align: center;
+   justify-content: center;
+   margin-top: 20px;
+}
+hr{
+   width: 440px;
+   height:2;
+}
