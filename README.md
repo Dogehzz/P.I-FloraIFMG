@@ -3,7 +3,7 @@
 
 
 ## Comentarios: 
-#### Davi Gomes - Sua função e buscar uma forma de redirecionar a pessoa para a câmera do celular para a leitura do QR CODE e integrar isso ao código. 
+#### Davi Gomes - Sua função é buscar uma forma de redirecionar a pessoa para a câmera do celular para a leitura do QR CODE e integrar isso ao código. 
 
 ## Observações: 
 #### Às telas devem seguir o padrão do projeto no Figma, como a cor, fonte e etc. O link para o Wireframe está fixado no grupo do WhatsApp. 
