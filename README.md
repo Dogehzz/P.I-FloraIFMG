@@ -3,3 +3,4 @@
 
 
 ## Comentarios: 
+#### Davi Gomes - Sua função e buscar uma forma de redirecionar a pessoa para a câmera do celular para a leitura do QR CODE e integrar isso ao código. 
