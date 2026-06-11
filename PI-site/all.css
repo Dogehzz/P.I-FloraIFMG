@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 body{
     background-color: #ACE1AF;
     
@@ -14,7 +16,7 @@ body{
    font-size: 20px;
    height: auto;
    transform: translateX(25%); /** move horizontalmente tudo tipo o right*/
-   font-family:'Open Sans',sans-serif;
+   font-family:'Inter',sans-serif;
    top:-18px;
 }
 .imagem-logo{
