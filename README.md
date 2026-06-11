@@ -18,6 +18,6 @@
 | Marcos Cauã | Tela 5 | Lista de resultados da busca |
 | Marcos Felipe | Tela 6 | Tela de ajuda |
 | Emanuelle | Tela 7 | Tela de créditos |
-| Matheus | Tela principal | Tela 1 + Tela 1.1 |
+| Matheus | Tela 1 + 1.1 | Tela 1 + Tela 1.1 |
 | Davi Gomes | Tela 2 | Redirecionamento para câmera |
 | Táfiny | Tela 8 | Sobre o Projeto |
