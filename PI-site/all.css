@@ -1,3 +1,4 @@
+
 body{
     background-color: #ACE1AF;
     
@@ -10,28 +11,35 @@ body{
    text-align: center;
    width: 100%;
    align-items: center;
-   font-size: 10px;
+   font-size: 20px;
    height: auto;
-   transform: translateX(15%); /** move horizontalmente tudo tipo o right*/
+   transform: translateX(25%); /** move horizontalmente tudo tipo o right*/
    font-family:'Open Sans',sans-serif;
-   
+   top:-18px;
 }
 .imagem-logo{
    height: 50px;
 }
 .verde_IFMG{
    color:#4A5D23;
+   font-size:26px;
 }
 #nada_de_linha{
    text-decoration: none;
 }
+.logo_texto{
+    font-size:30px;
+}
+
 footer{
   
    background-color:#4A5D23;
-   width: 440px;
+   width: 490px;
    height:107px; 
    position:fixed;
    top:971px;
+   line-height:1.7;
+   font-size:18px;
 }
 .caixa_rodape{
    margin:auto;
@@ -42,4 +50,10 @@ footer{
 hr{
    width: 440px;
    height:2;
+}
+header{
+
+   background-color: #fff;
+   width: 120%;
+   height: 10%;
 }

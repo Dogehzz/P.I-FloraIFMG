@@ -29,6 +29,7 @@
             <h1 class="logo_texto"><u id="nada_de_linha">Flora</u><span class="verde_IFMG">IFMG</span></h1>
         </div>
     </header>
+    
     <hr class="divisor">
     <div class="diminuir_espaco">
         <h1>Explore a flora do IFMG Campus</h1>
@@ -40,10 +41,36 @@
     </div>
     <div class="caixa_p">
         <p>O floraIFMG, é uma ferramenta que </p>
-        <p>busca te auxiliar a descobrir as
-        <p>espécies do nosso campus</p> </p>
+        <p>busca te auxiliar a descobrir as</p>
+        <p>espécies do nosso campus</p> 
    </div>
-   
+    <div class="scanner">
+        <div class="borda_scanner"></div>
+            <p class="texto_scanner"> Escaneie o QR Code da placa</p>
+    </div>
     <footer><div class="caixa_rodape">Desenvolvido por alunos do Técnico em Informática · IFMG Campus Ribeirão das Neves · 2026 Fins educacionais · info2BG3@gmail.com</div></footer>
+      <!-- aqui o qr code do flora-->
+      <img id="minha-imagem" src="qrcode-teste.png" alt="Carregando QR Code...">
+
+    <!--  O elemento onde o texto decodificado vai aparecer -->
+    <p id="resultado">Aguardando leitura...</p>
+
+    <script type="module">
+        const imagemElemento = document.getElementById('minha-imagem');
+        const resultadoTexto = document.getElementById('resultado');
+
+        // 💡 AGUARDA A IMAGEM CARREGAR NA TELA
+        imagemElemento.onload = () => {
+            QrScanner.scanImage(imagemElemento)
+           .then(resultado => {
+                console.log('Conteúdo do QR Code:', resultado);
+                resultadoTexto.innerText = 'Dado decodificado: ${resultado}';
+            })
+            .catch(error => {
+                console.error('Falha ao ler o QR Code:', error);
+                resultadoTexto.innerText = 'Não foi possível encontrar um QR Code válido na imagem.';
+            });
+        };
+    </script>
 </body>
 </html>
