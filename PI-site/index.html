@@ -59,7 +59,7 @@
         const imagemElemento = document.getElementById('minha-imagem');
         const resultadoTexto = document.getElementById('resultado');
 
-        // 💡 AGUARDA A IMAGEM CARREGAR NA TELA
+        // AGUARDA A IMAGEM CARREGAR NA TELA
         imagemElemento.onload = () => {
             QrScanner.scanImage(imagemElemento)
            .then(resultado => {
