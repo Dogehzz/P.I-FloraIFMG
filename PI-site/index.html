@@ -55,6 +55,16 @@
     <!--  O elemento onde o texto decodificado vai aparecer -->
     <p id="resultado">Aguardando leitura...</p>
 
+
+    <!--Botão embaixo do qr-->
+    <div class="Botao"><button>Buscar</button></div>
+        <svg class="lupa" viewBox="0 0 24 24" fill="none" stoke="currentColor" stroke-width="2"></svg>
+    <div class="caixa_pesquisa">
+        <input type="text" class="pesquisa_texto" placeholder="Buscar">
+        <a href="#" class="pesquisa_btn"><img src="logo_lupa.png" height="20" width="20"></a>
+    </div>
+
+
     <script type="module">
         const imagemElemento = document.getElementById('minha-imagem');
         const resultadoTexto = document.getElementById('resultado');
@@ -72,5 +82,6 @@
             });
         };
     </script>
+
 </body>
 </html>
