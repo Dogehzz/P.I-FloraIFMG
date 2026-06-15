@@ -17,11 +17,11 @@
 | Membro | Telas | Observação |
 | :--- | :--- | :--- |
 | João Pedro | Tela 1 + Tela 1.1 + Manutenção Geral | Tela principal |
-| Gabriel Temponi | Tela 3 | Tela da planta, rica em conteúdo, exige atenção |
-| Gabriel Luiz | Tela 4 + Tela 4.1 | Mesma lógica da 1.1, a 4.1 é quase pronta |
-| Marcos Cauã | Tela 5 | Lista de resultados da busca |
-| Marcos Felipe | Tela 6 | Tela de ajuda |
-| Emanuelle | Tela 7 | Tela de créditos |
 | Matheus | Tela 1 + 1.1 | Tela 1 + Tela 1.1 |
 | Davi Gomes | Tela 2 | Redirecionamento para câmera |
-| Táfiny | Tela 8 | Sobre o Projeto |
+| Gabriel Temponi | Tela 3 | Tela da planta, rica em conteúdo, exige atenção |
+| Gabriel Luiz | Tela 4 | Lista das plantas encontradas |
+| Marcos Cauã | Tela 4 | Lista das plantas encontradas |
+| Marcos Felipe | Tela 5 | Tela de ajuda |
+| Emanuelle | Tela 6 | Tela de créditos |
+| Táfiny | Tela 7 | Sobre o Projeto |
