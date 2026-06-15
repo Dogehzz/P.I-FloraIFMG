@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="index.css">
+    <!-- Biblioteca para decodificar QR Code -->
+    <script src="https://cdn.jsdelivr.net/npm/qr-scanner@1.4.2/qr-scanner.umd.min.js"></script>
 </head>
 <body>
     <header>
@@ -49,7 +51,11 @@
             <p class="texto_scanner"> Escaneie o QR Code da placa</p>
     </div>
     
-      <!-- aqui o qr code do flora-->
+      <!-- Botão para abrir câmera do celular -->
+      <input type="file" accept="image/*" capture="environment" id="qr-camera" style="display:none;">
+      <button id="botao-camera" style="padding: 10px 20px; margin: 20px; background-color: #4A5D23; color: white; border-radius: 25px; border: none; cursor: pointer; font-size: 16px;">📷 Abrir Câmera</button>
+
+      <!-- aqui o qr code do flora (para testes sem câmera) -->
       <img id="minha-imagem" src="qrcode-teste.png" alt="Carregando QR Code...">
 
     <!--  O elemento onde o texto decodificado vai aparecer -->
@@ -68,13 +74,51 @@
     <script type="module">
         const imagemElemento = document.getElementById('minha-imagem');
         const resultadoTexto = document.getElementById('resultado');
+        const inputCamera = document.getElementById('qr-camera');
+        const botaoCamera = document.getElementById('botao-camera');
+
+        // Ao clicar no botão de câmera, abre o input file
+        botaoCamera.addEventListener('click', () => {
+            inputCamera.click();
+        });
+
+        // Quando uma foto é capturada pela câmera
+        inputCamera.addEventListener('change', (event) => {
+            const arquivo = event.target.files[0];
+            if (arquivo) {
+                const leitor = new FileReader();
+                leitor.onload = (e) => {
+                    // Cria uma imagem temporária com o arquivo capturado
+                    const imagemTemp = new Image();
+                    imagemTemp.src = e.target.result;
+                    imagemTemp.onload = () => {
+                        console.log('Foto capturada pela câmera!');
+                        processarQrCode(imagemTemp);
+                    };
+                };
+                leitor.readAsDataURL(arquivo);
+            }
+        });
+
+        // Função para processar QR code de qualquer imagem
+        function processarQrCode(imagem) {
+            QrScanner.scanImage(imagem)
+                .then(resultado => {
+                    console.log('Conteúdo do QR Code:', resultado);
+                    resultadoTexto.innerText = 'Dado decodificado: ' + resultado;
+                })
+                .catch(error => {
+                    console.error('Falha ao ler o QR Code:', error);
+                    resultadoTexto.innerText = 'Não foi possível encontrar um QR Code válido na imagem.';
+                });
+        }
 
         // AGUARDA A IMAGEM CARREGAR NA TELA
         imagemElemento.onload = () => {
             QrScanner.scanImage(imagemElemento)
            .then(resultado => {
                 console.log('Conteúdo do QR Code:', resultado);
-                resultadoTexto.innerText = 'Dado decodificado: ${resultado}';
+                resultadoTexto.innerText = 'Dado decodificado: ' + resultado;
             })
             .catch(error => {
                 console.error('Falha ao ler o QR Code:', error);
