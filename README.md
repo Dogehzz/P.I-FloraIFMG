@@ -16,8 +16,8 @@
 
 | Membro | Telas | Observação |
 | :--- | :--- | :--- |
-| João Pedro | Tela 1 + Tela 1.1 + Manutenção Geral | Tela principal |
-| Matheus | Tela 1 + 1.1 | Tela 1 + Tela 1.1 |
+| João Pedro | Tela 1 + Tela 1.1 + Manutenção Geral | Tela principal e revisão geral|
+| Matheus | Tela 1 + 1.1 | Tela principal |
 | Davi Gomes | Tela 2 | Redirecionamento para câmera |
 | Gabriel Temponi | Tela 3 | Tela da planta, rica em conteúdo, exige atenção |
 | Gabriel Luiz | Tela 4 | Lista das plantas encontradas |
