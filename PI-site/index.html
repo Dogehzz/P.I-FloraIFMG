@@ -48,7 +48,7 @@
         <div class="borda_scanner"></div>
             <p class="texto_scanner"> Escaneie o QR Code da placa</p>
     </div>
-    <footer><div class="caixa_rodape">Desenvolvido por alunos do Técnico em Informática · IFMG Campus Ribeirão das Neves · 2026 Fins educacionais · info2BG3@gmail.com</div></footer>
+    
       <!-- aqui o qr code do flora-->
       <img id="minha-imagem" src="qrcode-teste.png" alt="Carregando QR Code...">
 
@@ -57,14 +57,14 @@
 
 
     <!--Botão embaixo do qr-->
-    <div class="Botao"><button>Buscar</button></div>
+    <div  class="Botao"><button id="botao">Buscar</button></div>
         <svg class="lupa" viewBox="0 0 24 24" fill="none" stoke="currentColor" stroke-width="2"></svg>
-    <div class="caixa_pesquisa">
+    <div id="caixa_pesquisa" class="caixa_pesquisa">
         <input type="text" class="pesquisa_texto" placeholder="Buscar">
         <a href="#" class="pesquisa_btn"><img src="logo_lupa.png" height="20" width="20"></a>
     </div>
 
-
+    <footer><div class="caixa_rodape">Desenvolvido por alunos do Técnico em Informática · IFMG Campus Ribeirão das Neves · 2026 Fins educacionais · info2BG3@gmail.com</div></footer>
     <script type="module">
         const imagemElemento = document.getElementById('minha-imagem');
         const resultadoTexto = document.getElementById('resultado');
@@ -81,6 +81,26 @@
                 resultadoTexto.innerText = 'Não foi possível encontrar um QR Code válido na imagem.';
             });
         };
+            // Busca o botão pelo ID 'botao'
+        const esconde = document.getElementById("botao");
+
+        // BUSCA PELA CLASSE (com ponto) para evitar erros de ID duplicado ou errado
+        const apareca = document.querySelector(".caixa_pesquisa");
+
+        if (esconde && apareca) {
+            esconde.addEventListener("click", function(event) {
+                event.preventDefault(); // Impede o formulário de resetar a página
+        
+        // Some com o botão Buscar
+                esconde.style.setProperty('display', 'none', 'important');
+        
+        // Força a caixa de pesquisa a aparecer na tela
+                apareca.style.setProperty('display', 'flex', 'important');
+        
+              
+        });
+        }
+        
     </script>
 
 </body>
