@@ -74,7 +74,7 @@ a{
 }
 h1{
     font-size:16px;
-    font-family:inter;
+    font-family: 'Inter', sans-serif;
 }
 .diminuir_espaco{
     position:relative;
