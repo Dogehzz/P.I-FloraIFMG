@@ -167,8 +167,8 @@ button{
     display:none; 
     justify-content: space-between;
     align-items: center;
-    top:954px;
-    left:40px;
+    top:1040px;
+    left:35px;
    
 }
 .pesquisa_texto{
@@ -184,7 +184,6 @@ button{
     height: 40px;
     border-radius: 50%;
 }
-button:active{
-    display:none;
-   
+button.botao{
+   display:none;
 }
