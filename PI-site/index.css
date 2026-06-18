@@ -45,7 +45,7 @@
 }
 .menu ul{
     list-style: none;
-    padding: 18px;
+    padding: 5px;
     line-height: 1.7;
     font-size: 20px;
    
@@ -167,8 +167,8 @@ button{
     display:none; 
     justify-content: space-between;
     align-items: center;
-    top:1040px;
-    left:35px;
+    top:960px;
+    left:45px;
    
 }
 .pesquisa_texto{
