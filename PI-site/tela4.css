@@ -104,4 +104,152 @@ h1{
 
 .espacamento{
     translate:4%;
+    transform: translateY(35px);
 }
+
+.espacamento2{
+    translate:28%;
+    margin-top: 100px;
+    transform: translateY(70px);
+}
+
+.espacamento3{
+    translate:28%;
+    margin-top: 100px;
+    transform: translateY(-41px);
+}
+
+.espacamento4{
+    translate:28%;
+    margin-top: 100px;
+    transform: translateY(-150px);
+}
+
+.espacamento5{
+    translate:28%;
+    margin-top: 100px;
+    transform: translateY(-270px);
+}
+
+.info{
+    translate:28%;
+    display: flex;
+    gap:19%;
+    color: gray;
+    transform: translateY(55px);
+}
+
+.info1{
+    translate:28%;
+    display: flex;
+    transform: translateY(25px);
+    gap:24%;
+}
+
+.info2{
+    translate:28%;
+    display: flex;
+    transform: translateY(7px);
+    gap:24%;
+    color: gray;
+}
+
+.info3{
+    translate:28%;
+    display: flex;
+    transform: translateY(-2px);
+    gap:24%;
+}
+
+.info4{
+    translate:28%;
+    display: flex;
+    gap:19%;
+    color: gray;
+    transform: translateY(-60px);
+}
+
+.info5{
+    translate:28%;
+    display: flex;
+    gap:18%;
+    transform: translateY(-90px);
+}
+
+.info6{
+    translate:28%;
+    display: flex;
+    transform: translateY(-111px);
+    gap:24%;
+    color: gray;
+}
+
+.info7{
+    translate:28%;
+    display: flex;
+    transform: translateY(-120px);
+    gap:24%;
+}
+
+.info8{
+    translate:28%;
+    display: flex;
+    transform: translateY(-170px);
+    gap:18%;
+    color: gray;
+}
+
+.info9{
+    translate:28%;
+    display: flex;
+    gap:34%;
+    transform: translateY(-200px);
+}
+
+.info10{
+    translate:28%;
+    display: flex;
+    transform: translateY(-220px);
+    gap:18%;
+    color: gray;
+}
+
+.info11{
+    translate:28%;
+    display: flex;
+    gap:34%;
+    transform: translateY(-230px);
+}
+
+.info12{
+    translate:28%;
+    display: flex;
+    transform: translateY(-289px);
+    gap:18%;
+    color: gray;
+}
+
+.info13{
+    translate:28%;
+    display: flex;
+    gap:31%;
+    transform: translateY(-320px);
+}
+
+.info14{
+    translate:28%;
+    display: flex;
+    transform: translateY(-335px);
+    gap:18%;
+    color: gray;
+}
+
+.info15{
+    translate:28%;
+    display: flex;
+    gap:34%;
+    transform: translateY(-350px);
+}
+
+
+
