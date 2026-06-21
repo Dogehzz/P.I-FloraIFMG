@@ -88,18 +88,15 @@ h1{
     padding: -3px;
     justify-items: baseline;
     left: 5px;
-    line-height: 0.7
+    line-height: 1.35;
+    font-size: 26px;
+    max-width: 760px;
+}
+.caixa_p p{
+    margin: 0;
 }
 .diminuir_espaco h1{
     font-size: 28px;
-}
-.caixa_p{
-    position:relative;
-    padding: -3px;
-    justify-items: baseline;
-    left: 5px;
-    line-height: 0.7;
-    font-size: 26px;
 }
 /**PARTE DO SCANNER*/
 .scanner{
