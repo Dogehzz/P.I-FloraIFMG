@@ -18,10 +18,10 @@
 | :--- | :--- | :--- |
 | João Pedro | Tela 1 + Tela 1.1 + Manutenção Geral | Tela principal e revisão geral|
 | Matheus | Tela 1 + 1.1 | Tela principal |
-| Davi Gomes | Tela 2 | Redirecionamento para câmera |
 | Gabriel Temponi | Tela 3 | Tela da planta, rica em conteúdo, exige atenção |
 | Gabriel Luiz | Tela 4 | Lista das plantas encontradas |
 | Marcos Cauã | Tela 4 | Lista das plantas encontradas |
 | Marcos Felipe | Tela 5 | Tela de ajuda |
+| Davi Gomes | Tela 5 | Tela de ajuda |
 | Emanuelle | Tela 6 | Tela de créditos |
 | Táfiny | Tela 7 | Sobre o Projeto |
