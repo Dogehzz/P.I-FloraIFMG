@@ -109,6 +109,7 @@ h1{
     /**isso mantem o formato em quadrado esse aspecto*/
     transform: translateX(12%);
     display: flex;
+   
 
 }
 .borda_scanner{
@@ -136,15 +137,16 @@ h1{
     left:60px;
 }
 /** botão pricipal da busca*/
-.botao{
+.Botao{
+    margin-top:10px;
     display:flex;
     justify-content: center;
     align-items: center;
-    /**tranformacao visual, transicao suave do botao**/
-    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  
     
 }
 button{
+    
     padding:30px 130px;
     font-size:18px;
     border-radius: 50px;
@@ -153,6 +155,7 @@ button{
     background-color: #D9D9D9;
     box-shadow: rgb(0 0 0 /5%) 0 0 8px;
     outline:none;
+    
 }
 
 /**teste criar um botao e esconder, ae quando clicar no primeiro escondo ele e coloco o segundo vísivel**/
@@ -161,10 +164,10 @@ button{
     border-radius:50px;
     padding:18px 40px;
     background: #D9D9D9;
-    display:none; 
+    display: none;
     justify-content: space-between;
     align-items: center;
-    top:960px;
+    top:770px;
     left:45px;
    
 }
@@ -181,6 +184,4 @@ button{
     height: 40px;
     border-radius: 50%;
 }
-button.botao{
-   display:none;
-}
+

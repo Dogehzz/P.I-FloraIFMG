@@ -44,14 +44,14 @@
     </div>
     
       <!-- aqui o qr code do flora-->
-      <img id="minha-imagem" src="qrcode-teste.png" alt="Carregando QR Code...">
+      
 
     <!--  O elemento onde o texto decodificado vai aparecer -->
-    <p id="resultado">Aguardando leitura...</p>
+    
 
 
     <!--Botão embaixo do qr-->
-    <div  class="Botao"><button id="botao">Buscar</button></div>
+    <div  class="Botao"><button id="botao" onclick="escondeBotao()">Buscar</button></div>
         <svg class="lupa" viewBox="0 0 24 24" fill="none" stoke="currentColor" stroke-width="2"></svg>
     <div id="caixa_pesquisa" class="caixa_pesquisa">
         <input type="text" class="pesquisa_texto" placeholder="Buscar">
@@ -59,43 +59,13 @@
     </div>
 
     <footer><div class="caixa_rodape">Desenvolvido por alunos do Técnico em Informática · IFMG Campus Ribeirão das Neves · 2026 Fins educacionais · info2BG3@gmail.com</div></footer>
-    <script type="module">
-        const imagemElemento = document.getElementById('minha-imagem');
-        const resultadoTexto = document.getElementById('resultado');
-
-        // AGUARDA A IMAGEM CARREGAR NA TELA
-        imagemElemento.onload = () => {
-            QrScanner.scanImage(imagemElemento)
-           .then(resultado => {
-                console.log('Conteúdo do QR Code:', resultado);
-                resultadoTexto.innerText = 'Dado decodificado: ${resultado}';
-            })
-            .catch(error => {
-                console.error('Falha ao ler o QR Code:', error);
-                resultadoTexto.innerText = 'Não foi possível encontrar um QR Code válido na imagem.';
-            });
-        };
-            // Busca o botão pelo ID 'botao'
-        const esconde = document.getElementById("botao");
-
-        // BUSCA PELA CLASSE (com ponto) para evitar erros de ID duplicado ou errado
-        const apareca = document.querySelector(".caixa_pesquisa");
-
-        if (esconde && apareca) {
-            esconde.addEventListener("click", function(event) {
-                event.preventDefault(); // Impede o formulário de resetar a página
-        
-        // Some com o botão Buscar
-                esconde.style.setProperty('display', 'none', 'important');
-        
-        // Força a caixa de pesquisa a aparecer na tela
-                apareca.style.setProperty('display', 'flex', 'important');
-        
-              
-        });
+    <script>
+        function escondeBotao(){
+            document.getElementById('botao').style.display = 'none';
+    
+            // agora é fazer aparecer esse
+            document.getElementById('caixa_pesquisa').style.display = 'flex'; 
         }
-        
     </script>
-
 </body>
 </html>
