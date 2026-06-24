@@ -176,7 +176,7 @@ button{
     background: none;
     outline:none;
     line-height: 40px;
-    color:white;
+    color:black;
     font-size:18px;
 }
 .pesquisa_btn{
@@ -184,4 +184,19 @@ button{
     height: 40px;
     border-radius: 50%;
 }
+/**auto complete**/
+.plantas{
+    top: 60px;;
+    left:20px;
+    margin-top:2px;
+    position:absolute;
+    background-color: #fff;
+    border:1 solid #cccccc;
+    /**Barra rolagem**/
+    overflow-y:auto;
+    z-index:9999;
+    width:250px;
+    max-height:200px;
+}
+
 

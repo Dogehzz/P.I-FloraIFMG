@@ -53,9 +53,15 @@
 
     <!--Botão embaixo do qr-->
     <div  class="Botao"><button id="botao"onclick="escondeBotao()">Buscar</button></div>
-        <svg class="lupa" viewBox="0 0 24 24" fill="none" stoke="currentColor" stroke-width="2"></svg>
+      
     <div id="caixa_pesquisa" class="caixa_pesquisa">
-        <input type="text" class="pesquisa_texto" placeholder="Buscar">
+        <input type="text"  list ="Todas_Plantas" class="pesquisa_texto" placeholder="Buscar">
+        <!--O datalist apresenta apenas os elementos que sejam semelhantes ao digitado na botao buscar -->
+        <datalist id="Todas_Plantas" class="plantas">
+            <option value="Erecto">
+            <option value="Pingo-de-ouro">           
+            <option value="Verde">
+        </datalist> 
         <a href="#" class="pesquisa_btn"><img src="logo_lupa.png" height="20" width="20"></a>
     </div>
 
