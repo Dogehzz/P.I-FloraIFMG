@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    background-color:#f3f3f3;
+}
+
+/* CARD PRINCIPAL */
+
+.container{
+    width:80%;
+    margin:40px auto;
+    background-color:#e4ebf3;
+    border-radius:24px;
+    padding:20px;
+    flex: center;
+}
+
+/* LOGO */
+
+.logo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logo h1{
+    font-size:32px;
+}
+
+/* TITULOS */
+
+h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+h3{
+    font-size:24px;
+    margin-top:25px;
+    margin-bottom:10px;
+}
+
+/* TABELA */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background-color:white;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+th{
+    text-align:left;
+    padding:15px;
+    font-size:18px;
+    border-bottom:2px solid #333;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid #ccc;
+    font-size:16px;
+}
+
+tr:last-child td{
+    border-bottom:none;
+}
+
+/* TEXTOS */
+
+section{
+    margin-top:25px;
+}
+
+section p{
+    margin-bottom:15px;
+    line-height:1.5;
+    font-size:16px;
+}
+
+strong{
+    font-weight:bold;
+}
+
+/* RODAPÉ */
+
+footer{
+    margin-top:30px;
+    padding:20px;
+    background-color:#1d5a44;
+    color:white;
+    border-radius:16px;
+    text-align:center;
+    font-size:14px;
+}

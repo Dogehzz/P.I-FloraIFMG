@@ -169,7 +169,6 @@ button{
     align-items: center;
     top:848px;
     left:45px;
-   
 }
 .pesquisa_texto{
     border:none;
@@ -185,7 +184,7 @@ button{
     border-radius: 50%;
 }
 /**auto complete**/
-.plantas{
+.caixa_pesquisa .plantas{
     top: 60px;;
     left:20px;
     margin-top:2px;
