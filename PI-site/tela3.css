@@ -235,3 +235,27 @@ h1{
     margin-top: 25 ;
 
 }
+
+.Imagens{
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-top: 41px;
+    b{
+        color: #000000;
+    }
+    img{
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+.info{
+    font-size: 40px;
+    font-weight: 10px;
+}
