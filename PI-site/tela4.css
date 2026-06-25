@@ -107,149 +107,302 @@ h1{
     transform: translateY(35px);
 }
 
-.espacamento2{
+.nome_planta{
+    translate:35%;
+    margin-top: 100px;
+    transform: translateY(20px);
+}
+
+.nome_planta2{
+    translate:35%;
+    margin-top: 100px;
+    transform: translateY(-75px);
+}
+
+.nome_planta3{
+    translate:35%;
+    margin-top: 100px;
+    transform: translateY(-75px);
+}
+
+.nome_planta4{
+    translate:35%;
+    margin-top: 100px;
+    transform: translateY(-75px);
+}
+
+
+.container-texto {
+    transform: translateY(20px);
+    translate:35%;
+    margin-left: 6px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888; 
+  
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px; 
+  
+    /* Garante que os textos fiquem um abaixo do outro */
+    display: flex;
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
+}
+
+
+.subtitulo {
+    font-family: sans-serif;
+    font-size: 9px;
+    /**que numero de cor é esse*/
+    color: #666666;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.titulo {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #000000;
+    margin: 0;
+    padding-left: 1px;
+}
+
+.container-texto-c2{
+    transform: translateY(20px);
+    translate: 70%;
+    margin-left: 6px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888; 
+
+  
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px; 
+  
+    /* Garante que os textos fiquem um abaixo do outro */
+    display: flex;
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
+    /* Muda a localização dele */
+    margin-top: -41.5px ;
+    margin-left: 158px;
+
+}
+
+.container-texto-c3{
+    transform: translateY(50px);
+    margin-left: -177px;
+}
+
+
+.familia{
     translate:28%;
     margin-top: 100px;
     transform: translateY(70px);
+    font-size: 9px;
+    color: #666666;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888;
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px;
+    /* Muda a localização dele */
+    margin-top: 0px;
+    margin-left: 322px;
+    line-height: 1.5;
+    margin-bottom: 2px;
 }
 
-.espacamento3{
-    translate:28%;
-    margin-top: 100px;
-    transform: translateY(-41px);
+.familia_nome{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 5px;
+    padding-left: 1px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888;
+    /* Muda a localização dele */
+    margin-top: -2px;
+    margin-left: 322px;
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px;
 }
 
-.espacamento4{
-    translate:28%;
-    margin-top: 100px;
-    transform: translateY(-150px);
+.linha{
+    width: 60%;
+    height: 4px;
+    background-color: #666;
+    border: none;
+    margin: 40px auto;
+    margin-top: 80px;
 }
 
-.espacamento5{
-    translate:28%;
-    margin-top: 100px;
-    transform: translateY(-270px);
-}
-
-.info{
-    translate:28%;
+.container-texto-c4{
+    transform: translateY(-72px);
+    translate:35%;
+    margin-left: 6px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888; 
+  
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px; 
+  
+    /* Garante que os textos fiquem um abaixo do outro */
     display: flex;
-    gap:19%;
-    color: gray;
-    transform: translateY(55px);
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
 }
 
-.info1{
-    translate:28%;
+.container-texto-c5{
+    transform: translateY(-72px);
+    translate: 70%;
+    margin-left: 6px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888; 
+
+  
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px; 
+  
+    /* Garante que os textos fiquem um abaixo do outro */
     display: flex;
-    transform: translateY(25px);
-    gap:24%;
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
+    /* Muda a localização dele */
+    margin-top: -41.5px ;
+    margin-left: 158px;
+
 }
 
-.info2{
-    translate:28%;
+.container-texto-c6{
+    transform: translateY(-43px);
+    margin-left: -177px;
+}
+
+.linha2{
+    width: 60%;
+    height: 4px;
+    background-color: #666;
+    border: none;
+    margin: 40px auto;
+    margin-top: -15px;
+}
+
+.container-texto-c7{
+    transform: translateY(-72px);
+    translate:35%;
+    margin-left: 6px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888; 
+  
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px; 
+  
+    /* Garante que os textos fiquem um abaixo do outro */
     display: flex;
-    transform: translateY(7px);
-    gap:24%;
-    color: gray;
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
 }
 
-.info3{
-    translate:28%;
+.container-texto-c8{
+    transform: translateY(-72px);
+    translate: 70%;
+    margin-left: 6px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888; 
+
+  
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px; 
+  
+    /* Garante que os textos fiquem um abaixo do outro */
     display: flex;
-    transform: translateY(-2px);
-    gap:24%;
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
+    /* Muda a localização dele */
+    margin-top: -41.5px ;
+    margin-left: 158px;
+
 }
 
-.info4{
-    translate:28%;
+.container-texto-c9{
+    transform: translateY(-43px);
+    margin-left: -177px;
+}
+
+.container-texto-c10{
+    transform: translateY(-72px);
+    translate:35%;
+    margin-left: 6px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888; 
+  
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px; 
+  
+    /* Garante que os textos fiquem um abaixo do outro */
     display: flex;
-    gap:19%;
-    color: gray;
-    transform: translateY(-60px);
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
 }
 
-.info5{
-    translate:28%;
+.container-texto-c11{
+    transform: translateY(-72px);
+    translate: 70%;
+    margin-left: 6px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888; 
+
+  
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px; 
+  
+    /* Garante que os textos fiquem um abaixo do outro */
     display: flex;
-    gap:18%;
-    transform: translateY(-90px);
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
+    /* Muda a localização dele */
+    margin-top: -41.5px ;
+    margin-left: 158px;
+
 }
 
-.info6{
-    translate:28%;
-    display: flex;
-    transform: translateY(-111px);
-    gap:24%;
-    color: gray;
+.container-texto-c12{
+    transform: translateY(-43px);
+    margin-left: -177px;
 }
 
-.info7{
-    translate:28%;
-    display: flex;
-    transform: translateY(-120px);
-    gap:24%;
+.linha3{
+    width: 60%;
+    height: 4px;
+    background-color: #666;
+    border: none;
+    margin: 40px auto;
+    margin-top: -15px;
 }
 
-.info8{
-    translate:28%;
-    display: flex;
-    transform: translateY(-170px);
-    gap:18%;
-    color: gray;
+.Imagem{
+  display: grid;
+  /* 2 colunas */
+  grid-template-columns: repeat(2, 150px);
+  /* espaço entre as imagens */
+  grid-gap: 15px; 
+  justify-content: center;
+  align-items: center;
 }
 
-.info9{
-    translate:28%;
-    display: flex;
-    gap:34%;
-    transform: translateY(-200px);
+.Imagem img{
+  width: 150px;
+  height: 150px;
+  /* corta a imagem sem deformar */
+  object-fit: cover;
+  /* deixa igual ao estilo da imagem */
+  border-radius: 20px;
 }
-
-.info10{
-    translate:28%;
-    display: flex;
-    transform: translateY(-220px);
-    gap:18%;
-    color: gray;
-}
-
-.info11{
-    translate:28%;
-    display: flex;
-    gap:34%;
-    transform: translateY(-230px);
-}
-
-.info12{
-    translate:28%;
-    display: flex;
-    transform: translateY(-289px);
-    gap:18%;
-    color: gray;
-}
-
-.info13{
-    translate:28%;
-    display: flex;
-    gap:31%;
-    transform: translateY(-320px);
-}
-
-.info14{
-    translate:28%;
-    display: flex;
-    transform: translateY(-335px);
-    gap:18%;
-    color: gray;
-}
-
-.info15{
-    translate:28%;
-    display: flex;
-    gap:34%;
-    transform: translateY(-350px);
-}
-
-
-
