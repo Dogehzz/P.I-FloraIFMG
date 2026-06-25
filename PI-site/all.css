@@ -37,10 +37,10 @@ body{
 footer{
   
    background-color:#4A5D23;
-   width: 490px;
-   height:107px; 
+   width: 440px;
+   height:130px; 
    position:fixed;
-   top:1150px;
+   top:1500px;
    line-height:1.7;
    font-size:18px;
 }
