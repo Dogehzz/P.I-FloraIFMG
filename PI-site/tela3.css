@@ -83,58 +83,10 @@ h1{
     left: 5px;
     line-height: 1.0;
 }
-.caixa_p{
-    position:relative;
-    padding: -3px;
-    justify-items: baseline;
-    left: 5px;
-    line-height: 1.35;
-    font-size: 26px;
-    max-width: 760px;
-}
-.caixa_p p{
-    margin: 0;
-}
+
 .diminuir_espaco h1{
     font-size: 40px;
     margin-top: 0px;
-}
-/**PARTE DO SCANNER*/
-.scanner{
-    width: 80%;
-    height: 30%;
-    border-radius:24px;
-    padding:16px;
-    box-sizing: border-box;
-    background-color: #e4ebf3;
-    /**isso mantem o formato em quadrado esse aspecto*/
-    transform: translateX(12%);
-    display: flex;
-
-}
-.borda_scanner{
-    width: 200%;
-    height:100%;
-    display:flex;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    padding:20px;
-    border-radius:16px;
-    /**esse dashed é tracejado*/
-    border:3px dashed #000000;
-    text-align: center;
-    position:relative;
-}
-.texto_scanner{
-    font-size: 16px;
-    text-align: center;
-    line-height:1.4;
-    position :absolute;
-    justify-content: center;
-    align-items:center;
-    top: 130px;
-    left:60px;
 }
 
 
@@ -254,8 +206,33 @@ h1{
 
 }
 
-
 .info{
-    font-size: 40px;
-    font-weight: 10px;
+    margin-top: 30px;
+    p{
+        font-family: sans-serif;
+        font-size: 18px; 
+        margin-bottom: 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 1;
+    }
+
 }
+.TituloInfo{
+    font-size: 26px;
+    margin-left: 5px;
+
+}
+
+.TituloLocalizacao{
+    font-size: 26px;
+    margin-left: 5px;
+    p{
+        margin-top: -6px;
+        margin-left: 2px;
+    }
+
+}
+
+
