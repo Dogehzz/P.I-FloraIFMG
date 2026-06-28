@@ -289,6 +289,7 @@ h1{
     border: none;
     margin: 40px auto;
     margin-top: -15px;
+
 }
 
 .container-texto-c7{
@@ -398,11 +399,94 @@ h1{
   align-items: center;
 }
 
-.Imagem img{
-  width: 150px;
-  height: 150px;
-  /* corta a imagem sem deformar */
-  object-fit: cover;
-  /* deixa igual ao estilo da imagem */
-  border-radius: 20px;
+.Imagens{
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    display:grid;
+    grid-template-columns:repeat(2, 65px);
+    grid-template-rows:repeat(2, 65px);
+    width:100px;
+    height:0px;
+    object-fit:cover;
+    border-radius:18px;
+    img{
+        border-radius: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        width: 57px;
+        margin-top:-30px;
+    }
+
+}
+
+.Imagens2{
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    display:grid;
+    grid-template-columns:repeat(2, 65px);
+    grid-template-rows:repeat(2, 65px);
+    width:100px;
+    height:0px;
+    object-fit:cover;
+    border-radius:18px;
+    img{
+        border-radius: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        width: 57px;
+        margin-top:-120px;
+    }
+
+}
+
+.Imagens3{
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    display:grid;
+    grid-template-columns:repeat(2, 65px);
+    grid-template-rows:repeat(2, 65px);
+    width:100px;
+    height:0px;
+    object-fit:cover;
+    border-radius:18px;
+    img{
+        border-radius: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        width: 57px;
+        margin-top:-120px;
+    }
+
+}
+
+.Imagens4{
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    display:grid;
+    grid-template-columns:repeat(2, 65px);
+    grid-template-rows:repeat(2, 65px);
+    width:100px;
+    height:0px;
+    object-fit:cover;
+    border-radius:18px;
+    img{
+        border-radius: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        width: 57px;
+        margin-top:-120px;
+    }
+
 }
