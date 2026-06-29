@@ -51,20 +51,23 @@
     </div>
     
     
-
+    
     <!--Botão embaixo do qr-->
     <div  class="Botao"><button id="botao"onclick="escondeBotao()">Buscar</button></div>
       
     <div id="caixa_pesquisa" class="caixa_pesquisa">
-        <input type="text"  list ="Todas_Plantas" class="pesquisa_texto" placeholder="Buscar">
+        <input type="text"  list ="Todas_Plantas"  class="pesquisa_texto" placeholder="Buscar">
         <!--O datalist apresenta apenas os elementos que sejam semelhantes ao digitado na botao buscar -->
-        <datalist id="Todas_Plantas" class="plantas">
-            <option value="Erecto">
-            <option value="Pingo-de-ouro">           
-            <option value="Verde">
-        </datalist> 
+        <!--OBS:melhor tentar com ul-->
         <a href="#" class="pesquisa_btn"><img src="logo_lupa.png" height="20" width="20"></a>
     </div>
+    <div  class="auto_complete" id="auto_complete">
+        <ul>
+            <li>Algodão</li>
+            <li>pingo-de-ouro</li>
+        </ul>
+    </div>
+ 
 
     <footer><div class="caixa_rodape">Desenvolvido por alunos do Técnico em Informática · IFMG Campus Ribeirão das Neves · 2026 Fins educacionais · info2BG3@gmail.com</div></footer>
     
@@ -74,7 +77,12 @@
     
             // agora é fazer aparecer esse
             document.getElementById('caixa_pesquisa').style.display = 'flex'; 
+            // agora tentar sumir com o auto complete e quando clicar no busca ele aparece novamente
+            document.getElementById('auto_complete').style.display ='none';
+            document.getElementById('auto_complete').style.display ='flex';
+            document.getElementById('auto_complete').style.top = '300px'
         }
+       
     </script>
 </body>
 </html>
