@@ -251,6 +251,11 @@ h1 {
 
 }
 
+.localizacao{
+    img{
+        margin-left: 9px;
+    }
+}
 .TituloLocalizacao {
     font-size: 26px;
     margin-left: 5px;
