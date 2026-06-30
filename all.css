@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 body{
-    background-color: #ACE1AF;
+    background-color: #F6F8EE;
     margin:0;
     font-family: 'Inter', sans-serif;
 }
@@ -36,7 +36,7 @@ body{
 
 footer{
   
-   background-color:#f6f8ea;
+   background-color:#2A511D;
    width: 440px;
    height:130px; 
    position:fixed;
@@ -59,6 +59,7 @@ header{
    background-color: #fff;
    width: 120%;
    height: 10%;
+   
 }
 
 .divisor{
