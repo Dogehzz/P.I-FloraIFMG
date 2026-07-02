@@ -32,7 +32,6 @@
 }
 /**problema: o menu ocupa espaço da logo*/
 .menu{
-    
     z-index:9999;
     position:absolute;
     top:100px;
@@ -71,6 +70,7 @@ a{
 #offcanvas:checked + .menu{
     height: 140px;
     width:200px;
+    overflow:visible;
 }
 h1{
     font-size:16px;

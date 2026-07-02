@@ -47,60 +47,60 @@
 
 
         <h1 class="espacamento">Plantas encontradas:</h1>
-        
-        <h1 class="nome_planta"><i>Duranta erecta</i></h1>
+        <div id="duranta erecta">
+            <h1 class="nome_planta"><i>Duranta erecta</i></h1>
 
-        <div id="duranta erecta" class="container-texto">
-            <span class="subtitulo">NOME(S) POPULAR(ES)</span>
-            <h1 class="titulo">pingo-de-ouro</h1>
+            <div  class="container-texto">
+                <span class="subtitulo">NOME(S) POPULAR(ES)</span>
+                <h1 class="titulo">pingo-de-ouro</h1>
+            </div>
+
+            <div class="container-texto-c2">
+                <span class="subtitulo">GÊNERO</span>
+                <h1 class="titulo"><i>Thelypteris</i></h1>
+            </div>
+
+            <div class="Imagens">
+                <img src="FotosPlantas/DurantaErecta_foto1.png" width="200">
+                <img src="FotosPlantas/DurantaErecta_foto2.png" width="200">
+                <img src="FotosPlantas/DurantaErecta_foto3.png" width="200">
+                <img src="FotosPlantas/DurantaErecta_foto4.png" width="200">
+            </div>
+
+            <div class="container-texto-c3">
+                <span class="familia">FAMÍLIA</span>
+                <h1 class="familia_nome"><i>Verbenaceae</i></h1>
+            </div>
+
+            <hr class="linha"></hr>
+
+            <h1 id="adenium" class="nome_planta2"><i>Adenium</i></h1>
+
+            <div class="container-texto-c4">
+                <span class="subtitulo">NOME(S) POPULAR(ES)</span>
+                <h1 class="titulo">Rosa-do-deserto</h1>
+            </div>
+
+            <div class="container-texto-c5">
+                <span class="subtitulo">GÊNERO</span>
+                <h1 class="titulo"><i>Adenium</i></h1>
+            </div>
+
+            <div class="Imagens2">
+                <img src="FotosPlantas/Adenium1.png" width="200">
+                <img src="FotosPlantas/Adenium2.png" width="200">
+                <img src="FotosPlantas/Adenium3.png" width="200">
+                <img src="FotosPlantas/Adenium4.png" width="200">
+            </div>
+
+            <div class="container-texto-c6">
+                <span class="familia">FAMÍLIA</span>
+                <h1 class="familia_nome"><i>Apocynaceae</i></h1>
+            </div>
         </div>
-
-        <div class="container-texto-c2">
-            <span class="subtitulo">GÊNERO</span>
-            <h1 class="titulo"><i>Thelypteris</i></h1>
-        </div>
-
-        <div class="Imagens">
-            <img src="FotosPlantas/DurantaErecta_foto1.png" width="200">
-            <img src="FotosPlantas/DurantaErecta_foto2.png" width="200">
-            <img src="FotosPlantas/DurantaErecta_foto3.png" width="200">
-            <img src="FotosPlantas/DurantaErecta_foto4.png" width="200">
-        </div>
-
-        <div class="container-texto-c3">
-            <span class="familia">FAMÍLIA</span>
-            <h1 class="familia_nome"><i>Verbenaceae</i></h1>
-        </div>
-
-        <hr class="linha"></hr>
-
-        <h1 class="nome_planta2"><i>Adenium</i></h1>
-
-        <div class="container-texto-c4">
-            <span class="subtitulo">NOME(S) POPULAR(ES)</span>
-            <h1 class="titulo">Rosa-do-deserto</h1>
-        </div>
-
-        <div class="container-texto-c5">
-            <span class="subtitulo">GÊNERO</span>
-            <h1 class="titulo"><i>Adenium</i></h1>
-        </div>
-
-        <div class="Imagens2">
-            <img src="FotosPlantas/Adenium1.png" width="200">
-            <img src="FotosPlantas/Adenium2.png" width="200">
-            <img src="FotosPlantas/Adenium3.png" width="200">
-            <img src="FotosPlantas/Adenium4.png" width="200">
-        </div>
-
-        <div class="container-texto-c6">
-            <span class="familia">FAMÍLIA</span>
-            <h1 class="familia_nome"><i>Apocynaceae</i></h1>
-        </div>
-
         <hr class="linha2"></hr>
 
-        <h1 class="nome_planta3"><i>Psidium guajava L</i></h1>
+        <h1 id="psidium guajava l"class="nome_planta3"><i>Psidium guajava L</i></h1>
 
         <div class="container-texto-c7">
             <span class="subtitulo">NOME(S) POPULAR(ES)</span>
@@ -126,7 +126,7 @@
 
         <hr class="linha3"></hr>
 
-        <h1 class="nome_planta4"><i>Mangifera indica L</i></h1>
+        <h1 id="mangifera indica l"class="nome_planta4"><i>Mangifera indica L</i></h1>
 
         <div class="container-texto-c10">
             <span class="subtitulo">NOME(S) POPULAR(ES)</span>
@@ -223,24 +223,29 @@
             itens.forEach(item => lista.appendChild(item));
 
 
-
             //aparecer apenas a  planta digitada
             const pesquisa = document.getElementById("caixa_pesquisa");
-            const idPlanta = getElementById("duranta erecta")
+            const idPlanta = ["duranta erecta","adenium","psidium guajava l","mangifera indica l"]
             const plantasMinusculo = idPlanta.map(planta => planta.toLowerCase());
-            campo.addEventListener('input', () => {
+            pesquisa.addEventListener('input', () => {
                 const textoDigitado = pesquisa.value.toLowerCase().trim();
                 listaPlantas.forEach(idPlanta => {
                     const elemento = document.getElementById(idPlanta);
         
             if (elemento) {
+                if (textoDigitado === "") {
+                    elemento.style.display = 'flex';
+                } 
                     // Se o ID da planta for IGUAL ao que foi digitado, REMOVE 'escondido' (o elemento fica)
                     // Se for DIFERENTE, ADICIONA 'escondido' (o elemento some)
-                    elemento.style.display = (idPlanta === textoDigitado) ? 'block' : 'none';
+                else if (idPlanta.toLowerCase().trim().startsWith(textoDigitado)){
+                    elemento.style.display = 'flex';
+                }
+                else {
+                    elemento.style.display = 'none';
+                }
             }
-    });
-                   
-                 
+    });    
             });
         </script>
     </body>
