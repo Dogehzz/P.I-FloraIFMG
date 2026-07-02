@@ -27,10 +27,12 @@ body{
 .imagem-logo{
    height: 50px;
 }
-.verde_IFMG{
-   color:#4A5D23;
-   font-size:26px;
+.verde_IFMG {
+   color: #2D541A;
+   font-size: 30px;
+   font-weight: 400; /* Deixando a letra mais fina */
 }
+
 #nada_de_linha{
    text-decoration: none;
 }
@@ -51,6 +53,9 @@ footer{
    text-align: center;
    justify-content: center;
    margin-top: 20px;
+   color: #ACE1AF;
+   font-size:17px;
+   font-weight: 100;
 }
 hr{
    width: 100%;
