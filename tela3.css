@@ -253,7 +253,7 @@ h1 {
 
 .localizacao{
     img{
-        margin-left: 9px;
+        margin-left: 13px;
     }
 }
 .TituloLocalizacao {
@@ -265,4 +265,54 @@ h1 {
         margin-left: 2px;
     }
 
+}
+
+.container-texto-L1{
+    margin-left: 12px;
+    margin-top: 28px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888;
+
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px;
+
+    /* Garante que os textos fiquem um abaixo do outro */
+    display: flex;
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
+}
+
+.container-texto-L2{
+    margin-left: 20px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888;
+
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px;
+
+    /* Garante que os textos fiquem um abaixo do outro */
+    display: flex;
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
+    margin-top: -42.5px;
+    margin-left: 205px;
+}
+
+.container-texto-L3{
+    margin-left: 12px;
+    margin-top: 20px;
+    /* Cria a barra vertical cinza do lado esquerdo */
+    border-left: 2px solid #888888;
+
+    /* Espaço entre a barra e o texto */
+    padding-left: 2px;
+
+    /* Garante que os textos fiquem um abaixo do outro */
+    display: flex;
+    flex-direction: column;
+    word-spacing: 0px;
+    line-height: 1.3;
+    margin-bottom: 70px;
 }
