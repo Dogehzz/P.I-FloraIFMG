@@ -259,3 +259,13 @@ h1{
     font-size: 40px;
     font-weight: 10px;
 }
+
+table{
+    border-spacing: 0px;
+}
+
+ td{
+    border-bottom: #333 solid 2px;
+    padding: 5pt;
+}
+th{border-bottom: #333 solid 3px;}
