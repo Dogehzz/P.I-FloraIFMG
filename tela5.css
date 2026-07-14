@@ -81,6 +81,7 @@ a {
 h1 {
     font-size: 32px;
     font-family: 'Inter', sans-serif;
+    translate: 1vw;
 }
 
 .diminuir_espaco {
@@ -104,11 +105,22 @@ h1 {
     font-size: 32px;
 }
 
-h1 {
-    translate: 1vw;
-}
-
 hr {
     width: 100%;
     height: 0.2vh;
+}
+
+p  { 
+    margin-right: 4vw;
+    margin-left:4vw;
+}
+
+h4  { 
+    margin-right: 2vw;
+    margin-left:2vw;
+}
+
+.border_ajuda {
+    margin-right: 2vw;
+    margin-left: 2vw;
 }
