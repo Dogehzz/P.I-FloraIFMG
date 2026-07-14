@@ -1,63 +1,64 @@
+<!DOCTYPE html>
 <html  lang="pt-BR">
-<head>
-    <title>FloraIFMG</title>
-    <!--torna o site responsivo esse meta-->
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
-</head>
-<body>
-    <header>
-        <label for="offcanvas" class="offcanvas">
-            <div class="menu_o_icone"></div>
-        </label>
-        <input type="checkbox" id="offcanvas">
-        <!--AREA DOS LINKS E DO MENU BRANCO REDONDO-->
-       <nav class="menu">
-            <ul>
-                <li><a href="tela5.html">Ajuda</a></li>
-                <li><a href="creditos.html">Creditos da Equipe</a></li>
-                <li><a href="#">Sobre o Projeto</a></li>
-            </ul>
-       </nav>
+    <head>
+        <title>FloraIFMG</title>
+        <!--torna o site responsivo esse meta-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="Style.css">
+    </head>
+    <body>
+        <header>
+            <label for="offcanvas" class="offcanvas">
+                <div class="menu_o_icone"></div>
+            </label>
+            <input type="checkbox" id="offcanvas">
 
-
+            <!--AREA DOS LINKS E DO MENU BRANCO REDONDO-->
+            <nav class="menu">
+                <ul>
+                    <li><a href="tela5.html">Ajuda</a></li>
+                    <li><a href="creditos.html">Créditos da Equipe</a></li>
+                    <li><a href="#">Sobre o Projeto</a></li>
+                </ul>
+            </nav>
+            <!--LOGO-->
+            <div class="card-flora">
+                <a href="index.html"><img class="imagem-logo" src="FotosPlantas/logo.png" alt="Logo FloraIFMG"></a>
+                <h1 class="logo_texto">
+                    <a href="index.html">
+                        <u id="nada_de_linha">Flora</u><span class="verde_IFMG">IFMG</span>
+                    </a>
+                </h1>
+            </div>
+        </header>
 
         
-        <!--LOGO-->
-        <div class="card-flora">
-            <img class="imagem-logo" src="FotosPlantas/logo.png" alt="">
-            <h1 class="logo_texto"><a href="index.html"><u id="nada_de_linha">Flora</u><span class="verde_IFMG">IFMG</span></a></h1>
-        </div>
-    </header>
-    
-    <hr class="divisor">
-    <div class="diminuir_espaco">
-        <h1>Explore a flora do IFMG Campus</h1>
-        <h1>Ribeirão das Neves. Escaneie o </h1>
-        <h1>QR code de qualquer planta ou </h1> 
-        <h1>busque pelo nome para </h1>
-        <h1>descobrir tudo sobre as </h1>
-        <h1>espécies do nosso campus.</h1>
-    </div>
-    <div class="caixa_p">
-        <p>O floraIFMG, é uma ferramenta que </p>
-        <p>busca te auxiliar a descobrir as</p>
-        <p>espécies do nosso campus</p> 
-   </div>
-    <div class="scanner">
-        <div class="borda_scanner"></div>
-            <p class="texto_scanner"> Escaneie o QR Code da placa</p>
-    </div>
-    
-    <!--Botão embaixo do qr-->
-    <div  class="Botao"><button id="botao" onclick="window.location.href='tela4.html'"> Buscar </button></div>
-        
-      
-    
- 
+        <hr class="divisor">
+        <main class="conteudo-principal">
+            <div class="diminuir_espaco">
+                <h1>Explore a flora do IFMG Campus Ribeirão das Neves. Escaneie o QR code de qualquer planta ou busque pelo nome para descobrir tudo sobre as espécies do nosso campus.</h1>
+            </div>
 
-    <footer><div class="caixa_rodape">Desenvolvido por alunos do Técnico em Informática · IFMG Campus Ribeirão das Neves · 2026 Fins educacionais · info2BG3@gmail.com</div></footer>
+            <div class="caixa_p">
+                <p>O floraIFMG é uma ferramenta que busca te auxiliar a descobrir as espécies do nosso campus</p>
+            </div>
+
+            <div class="scanner">
+                <div class="borda_scanner">
+                    <p class="texto_scanner">Escaneie o QR Code da placa</p>
+                </div>
+            </div>
+            <!--Botão embaixo do qr-->
+            <div class="Botao">
+                <button id="botao" onclick="window.location.href='tela4.html'">Buscar</button>
+            </div>
+        </main>
+
+        <footer>
+            <div class="caixa_rodape">
+                <p>Desenvolvido por alunos do Técnico em Informática · IFMG Campus Ribeirão das Neves · 2026 Fins educacionais · info2BG3@gmail.com</p>
+            </div>
+        </footer>
     
-   
-</body>
+    </body>
 </html>
