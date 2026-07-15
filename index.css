@@ -33,13 +33,13 @@
 /**problema: o menu ocupa espaço da logo*/
 .menu{
     z-index:9999;
-    position:absolute;
+    position:block;
     top:100px;
     border-radius: 10px;
     width: 100;
     background-color: white;
     font-size:16px;
-    height:0;
+  
     overflow: hidden;
 }
 .menu ul{
@@ -49,7 +49,7 @@
     font-size: 20px;
    
 }
-menu li a{
+.menu li a{
     text-decoration: none;
     color:black;
     display: block;
@@ -63,9 +63,7 @@ a{
 }
 /**so tira a caixa do input*/
 
-#offcanvas{
-    display:none;
-}
+
 /**OBS checked é Marcado, quando o icone é marcado ai ativa o menu*/
 #offcanvas:checked + .menu{
     height: 140px;
