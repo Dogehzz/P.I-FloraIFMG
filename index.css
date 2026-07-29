@@ -10,13 +10,15 @@
     position:relative;
     top:40px;
     left:50px;
-
+    z-index:10000;
 }
 /**Apenas criando as linhas do menu (quase desistindo)*/
 .menu_o_icone{
     border-top:solid 2px #333;
     position:relative;
     top: 4px;
+    pointer-events: none; /* Faz o clique ir direto para o label/input */
+
 }
 .menu_o_icone::before, .menu_o_icone::after{
     content:"";
@@ -26,26 +28,31 @@
     background-color: #333;
     position:absolute;
     top:5px;
+    pointer-events: none; /* Faz o clique ir direto para o label/input */
 }
  .menu_o_icone::after{
     top:12px;
+    pointer-events: none; /* Faz o clique ir direto para o label/input */
 }
 /**problema: o menu ocupa espaço da logo*/
 .menu{
+    
     z-index:9999;
-    position:block;
+    display: none;
+    position:absolute;
+    flex-direction: column;
+    align-items: center;
     top:100px;
-    border-radius: 10px;
-    width: 100;
+    border-radius: 20%;
+
     background-color: white;
-    font-size:16px;
-  
-    overflow: hidden;
+
+   
+
 }
 .menu ul{
     list-style: none;
     padding: 5px;
-    line-height: 1.7;
     font-size: 20px;
    
 }
@@ -53,7 +60,7 @@
     text-decoration: none;
     color:black;
     display: block;
-    padding: 30px;
+    padding: 15px;
   
     
 }
@@ -62,13 +69,15 @@ a{
     color: inherit;  
 }
 /**so tira a caixa do input*/
-
+#offcanvas{
+    display:none;
+}
 
 /**OBS checked é Marcado, quando o icone é marcado ai ativa o menu*/
 #offcanvas:checked + .menu{
-    height: 140px;
-    width:200px;
+    display:flex;
     overflow:visible;
+
 }
 h1{
     font-size:16px;

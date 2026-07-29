@@ -11,9 +11,9 @@
         <label for="offcanvas" class="offcanvas">
             <div class="menu_o_icone"></div>
         </label>
-        <input type="checkbox" id="offcanvas">
+        <input type="checkbox" id="offcanvas" onclick="aparece()">
         <!--AREA DOS LINKS E DO MENU BRANCO REDONDO-->
-       <nav class="menu">
+       <nav class="menu" id="menu">
             <ul>
                 <li><a href="tela5.html">Ajuda</a></li>
                 <li><a href="creditos.html">Creditos da Equipe</a></li>
@@ -59,6 +59,20 @@
 
     <footer><div class="caixa_rodape">Desenvolvido por alunos do Técnico em Informática · IFMG Campus Ribeirão das Neves · 2026 Fins educacionais · info2BG3@gmail.com</div></footer>
     
-   
+   <script>
+     const menu = document.getElementById("menu")
+        function aparece() {
+           if (checkbox.checked) {
+                menu.style.display = 'flex';
+                menu.style.height = '100px';
+                menu.style.width = '200px';
+                menu.style.overflow = 'visible';
+            } else {
+                menu.style.height = '0px';
+                menu.style.width = '0px';
+                menu.style.overflow = 'hidden';
+            }
+    }
+   </script>
 </body>
 </html>
