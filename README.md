@@ -10,6 +10,9 @@
 ## Observações: 
 #### Às telas devem seguir o padrão do projeto no Figma, como a cor, fonte e etc. O link para o Wireframe está fixado no grupo do WhatsApp. 
 
+## Atualizações Futuras: 
+#### Sobre o projeto, existem algumas solicitações que devemos cumprir. Temos que corrigir todos os bugs atuais do site e deixa-lo responsivo para telas de dispositivos moveis. 
+
 # Divisão das Tarefas
 
 | Membro | Telas | Observação |
