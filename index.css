@@ -5,18 +5,20 @@
     background-color: #f3f3f3;
     border:solid 2px #333;
     border-radius: 50%;
-    box-shadow: inset 0 0 3px #959494;
+    box-shadow: inset 0 0 2px #000000;
     padding: 10px 5px;
     position:relative;
     top:40px;
     left:50px;
-
+    z-index:10000;
 }
 /**Apenas criando as linhas do menu (quase desistindo)*/
 .menu_o_icone{
     border-top:solid 2px #333;
     position:relative;
     top: 4px;
+    pointer-events: none; /* Faz o clique ir direto para o label/input */
+
 }
 .menu_o_icone::before, .menu_o_icone::after{
     content:"";
@@ -26,34 +28,39 @@
     background-color: #333;
     position:absolute;
     top:5px;
+    pointer-events: none; /* Faz o clique ir direto para o label/input */
 }
  .menu_o_icone::after{
     top:12px;
+    pointer-events: none; /* Faz o clique ir direto para o label/input */
 }
 /**problema: o menu ocupa espaço da logo*/
 .menu{
+    
     z-index:9999;
+    display: none;
     position:absolute;
+    flex-direction: column;
+    align-items: center;
     top:100px;
-    border-radius: 10px;
-    width: 100;
+    border-radius: 20%;
+
     background-color: white;
-    font-size:16px;
-    height:0;
-    overflow: hidden;
+
+   
+
 }
 .menu ul{
     list-style: none;
     padding: 5px;
-    line-height: 1.7;
     font-size: 20px;
    
 }
-menu li a{
+.menu li a{
     text-decoration: none;
     color:black;
     display: block;
-    padding: 30px;
+    padding: 15px;
   
     
 }
@@ -62,15 +69,15 @@ a{
     color: inherit;  
 }
 /**so tira a caixa do input*/
-
 #offcanvas{
     display:none;
 }
+
 /**OBS checked é Marcado, quando o icone é marcado ai ativa o menu*/
 #offcanvas:checked + .menu{
-    height: 140px;
-    width:200px;
+    display:flex;
     overflow:visible;
+
 }
 h1{
     font-size:16px;
@@ -81,22 +88,24 @@ h1{
     padding: -3px;
     justify-items: baseline;
     left: 5px;
-    line-height: 1.0;
+   
 }
 .caixa_p{
     position:relative;
-    padding: -3px;
+    padding: 3%;
     justify-items: baseline;
     left: 5px;
     line-height: 1.35;
     font-size: 26px;
-    max-width: 760px;
+   
 }
 .caixa_p p{
     margin: 0;
 }
 .diminuir_espaco h1{
     font-size: 28px;
+    line-height: 1.5;
+    padding:3%;
 }
 /**PARTE DO SCANNER*/
 .scanner{
@@ -127,14 +136,15 @@ h1{
     position:relative;
 }
 .texto_scanner{
-    font-size: 16px;
-    text-align: center;
-    line-height:1.4;
-    position :absolute;
-    justify-content: center;
+    font-size: 1.2rem;
+    display:flex;
     align-items:center;
+    line-height:1.5;
+    position:absolute;
+    justify-content: center;
     top: 130px;
-    left:60px;
+    width:80%;
+    left:10%;
 }
 /** botão pricipal da busca*/
 .Botao{
