@@ -1,6 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+*, *::before, *::after{
+   box-sizing: border-box;
+}
+
+html, body{
+   overflow-x: hidden;
+   width: 100%;
+}
+
+img, picture, svg, video{
+   max-width: 100%;
+   height: auto;
+   display: block;
+}
+
 body{
     background-color: #F6F8EE;
     overflow-x: hidden;
@@ -15,14 +30,14 @@ body{
    flex-direction:row;
    position: relative;
    text-align: center;
-   width: 100%;
+   max-width: 100%;
    align-items: center;
    font-size: 20px;
    height: auto;
    justify-content: center;
    /**transform: translateX(25%);  move horizontalmente tudo tipo o right*/
    font-family:'Inter',sans-serif;
-   top:-18px;
+   margin-top: -18px;
 }
 .imagem-logo{
    height: 50px;
