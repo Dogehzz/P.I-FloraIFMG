@@ -10,7 +10,7 @@ body{
     background-color: #F8F9F3;
 }
 header{
-    margin: 10px;
+    padding: 10px;
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@ header{
 
 img{
     display: flex;
-    padding-left: 10px;
+    align-items: center;
 }
 
 a{
@@ -40,9 +40,24 @@ hr{
 h1{
     font-family: 'Roboto', sans-serif;
     font-weight: 775;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 37px;
     color: #1D4710;
     margin: 0;
     padding: 0;
 }
+
+button{
+    display: flex;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+
