@@ -5,16 +5,25 @@
 html, body{
     margin: 0;
     padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
 }
 body{
     background-color: #F8F9F3;
 }
 header{
-    padding: 10px;
+    padding: 30px;
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    
 }
 
 img{
@@ -47,17 +56,50 @@ h1{
     padding: 0;
 }
 
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 button{
     display: flex;
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background-color: green;
-    padding: 20px;
+    background-color: #EEEEEE;
+    padding: 23px;
     border: none;
     cursor: pointer;
     align-items: center;
     justify-content: center;
 }
 
+.Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+p{
+    font-family: 'inter', sans-serif;
+    margin: 10px;
+    font-size: 24px;
+    text-align: start;
+}
+
+
+.subtitulo{
+    font-size: 20px;
+    font-weight: 10;
+
+}
+
+footer{
+    background-color: #1D4710;
+    height: 30px;
+    width: 100%;
+}
