@@ -23,6 +23,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 10001;
 }
 
 img{
@@ -118,6 +120,15 @@ footer{
     color: #000000;
 }
 
+#loading, #status-text {
+    position: relative;
+    z-index: 10001;
+    color: #ffffff;
+}
+
+#SetaIndex, .SetaIndex, header{
+    pointer-events: auto !important;
+}
 #botaoQRCode {
     border-radius: 0;
     justify-content: center;
