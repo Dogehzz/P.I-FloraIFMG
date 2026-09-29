@@ -1,0 +1,128 @@
+$(document).ready(function() {
+    function ajustarLogo() {
+        // Defina o limite de pixels em que a logo começa a bater no botão
+        var larguraLimite = 500; 
+
+        if ($(window).width() <= larguraLimite) {
+            $('.Logo').addClass('modo-responsivo');
+        } else {
+            $('.Logo').removeClass('modo-responsivo');
+        }
+    }
+
+    // Executa assim que a página carrega
+    ajustarLogo();
+
+    // Executa sempre que a janela for redimensionada
+    $(window).resize(function() {
+        ajustarLogo();
+    });
+});
+// Confirmar click para ativar o scanner do QR Code
+
+function BotaoQRCode() {
+    // 1. O código HTML do seu scanner (com a última div fechada corretamente)
+    var codigoScanner = `
+        <div class="scanner-target">
+            <div class="laser-line"></div>
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+        </div>
+    `;
+
+    // 2. Insere o código dentro da área desejada
+    $('#scanner-container').html(codigoScanner);
+
+    // 3. Remove o botão da tela usando a classe dele
+    $('.botaoQRCode').remove();
+}
+
+// Vincula a função ao clique do botão assim que a página carregar
+$(document).ready(function() {$(document).on('click', '.botaoQRCode', function() {
+        BotaoQRCode();
+    });
+});
+
+// Scanner QR Code
+
+// Inicializa a instância da biblioteca apontada para a div 'reader'
+const html5Qrcode = new Html5Qrcode("reader");
+const statusText = document.getElementById('status-text');
+// Função universal para validar, limpar o leitor e redirecionar
+function processarResultado(decodedText) {
+    if (decodedText.startsWith('http://') || decodedText.startsWith('https://')) {
+        statusText.innerText = "Redirecionando...";
+        window.location.href = decodedText;
+    } else {
+        alert("Conteúdo do QR Code:\n\n" + decodedText);
+    }
+}
+// Função de sucesso do Scanner de Câmera
+function onScanSuccess(decodedText, decodedResult) {
+    html5Qrcode.stop().then(() => {
+        processarResultado(decodedText);
+    }).catch(() => {
+        processarResultado(decodedText);
+    });
+}
+// Configurações técnicas de vídeo
+const config = { 
+    fps: 20,
+    qrbox: function(viewfinderWidth, viewfinderHeight) {
+        return { width: 320, height: 320 }; 
+    },
+    aspectRatio: 1.0
+};
+// BLOCO DA CÂMERA: Isolado para que erros não quebrem o botão abaixo
+try {
+    html5Qrcode.start(
+        { facingMode: "environment" }, 
+        config,
+        onScanSuccess
+    ).catch(err => {
+        console.warn("Aviso de inicialização automática da câmera:", err);
+    });
+} catch (e) {
+    console.warn("Erro tratado na inicialização visual:", e);
+}
+
+// EVENTOS DO BOTÃO DE UPLOAD (SISTEMA TOTALMENTE ISOLADO)
+const fileInput = document.getElementById('qr-input');
+const uploadBtn = document.getElementById('upload-btn');
+if (uploadBtn && fileInput) {
+    // Clique limpo e isolado para abrir os arquivos do celular/computador
+    uploadBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // nao deixa o navegador regarregar a pagina ao clicar no 'a' por exemplo
+        e.stopPropagation(); // Impede interferências de outras camadas invisíveis, podendo sair do site
+        fileInput.click();    // abre a galeria
+    });
+    // Gerencia o arquivo assim que ele é escolhido
+    //parte que o usúario seleciona o qr code 
+    fileInput.addEventListener('change', function(e) {
+        if (!e.target.files || e.target.files.length === 0) {
+            return;
+        }
+
+        const imageFile = e.target.files[0];
+        statusText.innerText = "Processando imagem...";
+        
+        // Executa a leitura direta do arquivo estático (Sem depender da webcam rodar)
+        html5Qrcode.scanFile(imageFile, true)
+            .then(decodedText => {
+                // Se a câmera estava em execução paralela, desativa antes do redirecionamento
+                if (html5Qrcode.isScanning) {
+                    html5Qrcode.stop().then(() => processarResultado(decodedText));
+                } else {
+                    processarResultado(decodedText);
+                }
+            })
+            /**Obs: pelo cll ta funcionando tambem**/
+            .catch(err => {
+                statusText.innerText = "Falha na leitura.";
+                alert("Não foi possível identificar um QR Code nesta imagem. Certifique-se de que a foto esteja nítida, de perto e com boa iluminação.");
+                console.error("Erro interno no motor scanFile:", err);
+            });
+    });
+}

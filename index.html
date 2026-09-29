@@ -1,15 +1,17 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="main.js"></script>
     </head>
     <body>
         <header>
             <nav>
-                <button><img src="FotosPlantas/Menu.png" width="19vh"></button>
+                <button><img src="FotosPlantas/Menu.png" width="29vh"></button>
             </nav>
             <div class="Logo">
-                <img src="FotosPlantas/logo.png" width="50" height="50">
+                <img src="FotosPlantas/logo.png" width="55" height="55">
                 <h1><a href="index.html">Flora<span>IFMG</span></a></h1>
             </div>
             
@@ -18,6 +20,9 @@
         <main>
             <p class="titulo"><b>Explore a flora do IFMG Campus Ribeirão das Neves. Escaneie o QR code de qualquer planta ou busque pelo nome para descobrir tudo sobre as espécies do nosso campus.</b></p>
             <p class="subtitulo">O floraIFMG, e uma ferramenta que busca te auxiliar a descobrir as espécies do nosso campus.</p>
+            <button id="botaoQRCode" onclick="BotaoQRCode()">Scanner QR Code</button>
+            <div id="scanner-container"></div>
+        </div>
         </main>
         <footer>
             
