@@ -37,15 +37,17 @@ function BotaoQRCode() {
     `;
 
     var BotaoVoltar = `
-        
-    `
+        <button class="SetaIndex" onclick="window.location.href = 'index.html'"><img src="FotosPlantas/seta.png" width="29vh"></button>
+    `;
 
     // 2. Insere o código dentro da área desejada
+    $('#SetaIndex').html(BotaoVoltar);
     $('#scanner-container').html(codigoScanner);
     $('#loading').html(Loading);
 
     // 3. Remove o botão da tela usando a classe dele
-    $('.botaoQRCode').remove();
+    $('#botaoQRCode, .botaoQRCode').remove();
+    $('#MenuSanduiche').remove();
 
     // 4. Bloqueia os cliques no fundo da página
     $('body').addClass('bloquear-cliques');

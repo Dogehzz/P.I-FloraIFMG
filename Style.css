@@ -195,7 +195,8 @@ body.bloquear-cliques{
 #reader,
 .app-overlay,
 #upload-btn,
-#qr-input {
+#qr-input,
+.SetaIndex {
     pointer-events: auto !important;
 }
 /* Linha Laser Animada */
