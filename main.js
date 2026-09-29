@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     function ajustarLogo() {
         // Defina o limite de pixels em que a logo começa a bater no botão
@@ -23,6 +24,7 @@ $(document).ready(function() {
 function BotaoQRCode() {
     // 1. O código HTML do seu scanner (com a última div fechada corretamente)
     var codigoScanner = `
+        <div id="reader"></div>
         <div class="scanner-target">
             <div class="laser-line"></div>
             <div class="corner top-left"></div>
@@ -60,6 +62,7 @@ $(document).ready(function() {$(document).on('click', '.botaoQRCode', function()
 });
 
 // Scanner QR Code
+
 
 // Inicializa a instância da biblioteca apontada para a div 'reader'
 const html5Qrcode = new Html5Qrcode("reader");
@@ -141,6 +144,7 @@ if (uploadBtn && fileInput) {
                     processarResultado(decodedText);
                 }
             })
+
             /**Obs: pelo cll ta funcionando tambem**/
             .catch(err => {
                 statusText.innerText = "Falha na leitura.";
@@ -149,3 +153,4 @@ if (uploadBtn && fileInput) {
             });
     });
 }
+
