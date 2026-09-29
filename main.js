@@ -32,11 +32,23 @@ function BotaoQRCode() {
         </div>
     `;
 
+    var Loading = `
+        <p id="status-text">Aguardando leitura...</p>
+    `;
+
+    var BotaoVoltar = `
+        
+    `
+
     // 2. Insere o código dentro da área desejada
     $('#scanner-container').html(codigoScanner);
+    $('#loading').html(Loading);
 
     // 3. Remove o botão da tela usando a classe dele
     $('.botaoQRCode').remove();
+
+    // 4. Bloqueia os cliques no fundo da página
+    $('body').addClass('bloquear-cliques');
 }
 
 // Vincula a função ao clique do botão assim que a página carregar
@@ -50,6 +62,7 @@ $(document).ready(function() {$(document).on('click', '.botaoQRCode', function()
 // Inicializa a instância da biblioteca apontada para a div 'reader'
 const html5Qrcode = new Html5Qrcode("reader");
 const statusText = document.getElementById('status-text');
+
 // Função universal para validar, limpar o leitor e redirecionar
 function processarResultado(decodedText) {
     if (decodedText.startsWith('http://') || decodedText.startsWith('https://')) {
@@ -59,6 +72,7 @@ function processarResultado(decodedText) {
         alert("Conteúdo do QR Code:\n\n" + decodedText);
     }
 }
+
 // Função de sucesso do Scanner de Câmera
 function onScanSuccess(decodedText, decodedResult) {
     html5Qrcode.stop().then(() => {
@@ -67,6 +81,7 @@ function onScanSuccess(decodedText, decodedResult) {
         processarResultado(decodedText);
     });
 }
+
 // Configurações técnicas de vídeo
 const config = { 
     fps: 20,
@@ -75,6 +90,7 @@ const config = {
     },
     aspectRatio: 1.0
 };
+
 // BLOCO DA CÂMERA: Isolado para que erros não quebrem o botão abaixo
 try {
     html5Qrcode.start(
@@ -88,9 +104,12 @@ try {
     console.warn("Erro tratado na inicialização visual:", e);
 }
 
+
 // EVENTOS DO BOTÃO DE UPLOAD (SISTEMA TOTALMENTE ISOLADO)
+
 const fileInput = document.getElementById('qr-input');
 const uploadBtn = document.getElementById('upload-btn');
+
 if (uploadBtn && fileInput) {
     // Clique limpo e isolado para abrir os arquivos do celular/computador
     uploadBtn.addEventListener('click', (e) => {
@@ -98,12 +117,14 @@ if (uploadBtn && fileInput) {
         e.stopPropagation(); // Impede interferências de outras camadas invisíveis, podendo sair do site
         fileInput.click();    // abre a galeria
     });
+
     // Gerencia o arquivo assim que ele é escolhido
     //parte que o usúario seleciona o qr code 
     fileInput.addEventListener('change', function(e) {
         if (!e.target.files || e.target.files.length === 0) {
             return;
         }
+
 
         const imageFile = e.target.files[0];
         statusText.innerText = "Processando imagem...";

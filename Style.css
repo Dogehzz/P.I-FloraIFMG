@@ -110,6 +110,14 @@ footer{
     width: 100%;
 }
 
+#status-text{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    z-index: 3;
+    color: #000000;
+}
+
 #botaoQRCode {
     border-radius: 0;
     justify-content: center;
@@ -162,19 +170,33 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: 40px 20px;
-    pointer-events: none; /* Deixa os cliques passarem "através" desta div */
+    pointer-events: none;
 }
-
+#loading {
+    min-height: 24px; 
+}
 /* Alvo central do Scanner */
 .scanner-target {
     position: absolute;
     width: 320px;
     height: 320px;
-    box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.5); /* Corta e escurece as bordas */
+    box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     left: 50%;
     transform: translateX(-50%);
 
+}
+
+body.bloquear-cliques{
+    pointer-events: none;
+}
+
+#scanner-container,
+#reader,
+.app-overlay,
+#upload-btn,
+#qr-input {
+    pointer-events: auto !important;
 }
 /* Linha Laser Animada */
 .laser-line {
