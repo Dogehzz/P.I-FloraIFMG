@@ -22,9 +22,11 @@ $(document).ready(function() {
 // Confirmar click para ativar o scanner do QR Code
 
 function BotaoQRCode() {
+    if (html5Qrcode) return;
+
     // 1. O código HTML do seu scanner (com a última div fechada corretamente)
     var codigoScanner = `
-        <div id="reader"></div>
+
         <div class="scanner-target">
             <div class="laser-line"></div>
             <div class="corner top-left"></div>
@@ -32,6 +34,7 @@ function BotaoQRCode() {
             <div class="corner bottom-left"></div>
             <div class="corner bottom-right"></div>
         </div>
+        <div id="reader"></div>
     `;
 
     var Loading = `
@@ -46,6 +49,7 @@ function BotaoQRCode() {
     $('#SetaIndex').html(BotaoVoltar);
     $('#scanner-container').html(codigoScanner);
     $('#loading').html(Loading);
+    statusText = document.getElementById('status-text');
 
     // 3. Remove o botão da tela usando a classe dele
     $('#botaoQRCode, .botaoQRCode').remove();
@@ -53,6 +57,18 @@ function BotaoQRCode() {
 
     // 4. Bloqueia os cliques no fundo da página
     $('body').addClass('bloquear-cliques');
+
+    html5Qrcode = new Html5Qrcode("reader");
+    html5Qrcode.start(
+        { facingMode: "environment" },
+        config,
+        onScanSuccess
+    ).catch(err => {
+        console.error("Erro ao iniciar a câmera:", err);
+        statusText.innerText = window.isSecureContext
+            ? "Não foi possível acessar a câmera. Verifique a permissão do navegador."
+            : "A câmera exige uma conexão segura (HTTPS ou localhost).";
+    });
 }
 
 // Vincula a função ao clique do botão assim que a página carregar
@@ -65,8 +81,8 @@ $(document).ready(function() {$(document).on('click', '.botaoQRCode', function()
 
 
 // Inicializa a instância da biblioteca apontada para a div 'reader'
-const html5Qrcode = new Html5Qrcode("reader");
-const statusText = document.getElementById('status-text');
+let html5Qrcode = null;
+let statusText = null;
 
 // Função universal para validar, limpar o leitor e redirecionar
 function processarResultado(decodedText) {
@@ -95,20 +111,6 @@ const config = {
     },
     aspectRatio: 1.0
 };
-
-// BLOCO DA CÂMERA: Isolado para que erros não quebrem o botão abaixo
-try {
-    html5Qrcode.start(
-        { facingMode: "environment" }, 
-        config,
-        onScanSuccess
-    ).catch(err => {
-        console.warn("Aviso de inicialização automática da câmera:", err);
-    });
-} catch (e) {
-    console.warn("Erro tratado na inicialização visual:", e);
-}
-
 
 // EVENTOS DO BOTÃO DE UPLOAD (SISTEMA TOTALMENTE ISOLADO)
 
