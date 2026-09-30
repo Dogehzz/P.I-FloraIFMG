@@ -107,9 +107,19 @@ p{
 }
 
 footer{
-    background-color: #1D4710;
-    height: 50px;
+    background-color: #2d541a;
+    height: 100px;
     width: 100%;
+}
+
+.texto-footer{
+    color: #ace1af;
+    font-size: 14px;
+    font-weight: 1;
+    font-family: 'roboto', sans-serif;
+    margin: 10px;
+    padding-top: 10px;
+    line-height: 1.5;
 }
 
 #status-text{
@@ -129,6 +139,17 @@ footer{
 #SetaIndex, .SetaIndex, header{
     pointer-events: auto !important;
 }
+
+.qr-container-wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #botaoQRCode {
     border-radius: 0;
     justify-content: center;
