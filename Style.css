@@ -103,7 +103,10 @@ p{
 .subtitulo{
     font-size: 20px;
     font-weight: 10;
+}
 
+.estatico{
+    font-weight: 500;
 }
 
 footer{
