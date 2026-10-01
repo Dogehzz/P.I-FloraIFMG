@@ -122,16 +122,17 @@ p{
 
 .CategoriasIniciais{
     margin: 10px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 6px;
 }
 /*titulo categoria e informação da categoria*/
 
 .titulocat{
     color: #6B6B6B;
-    font-size: 10px;
+    font-size: 12px;
     margin: 4px;
 }
 
@@ -140,20 +141,37 @@ p{
 }
 
 .imagensPlantasTitulo{
-    margin: 10px;
+    margin: 15px;
 }
 
 .imagensPlantas{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 10px;
+    margin: 15px;
     gap: 10px;
 
 }
 
 .imagensPlantas img{
     border-radius: 15px;
+}
+
+.caracteristicas{
+    margin-top: 50px;
+}
+
+.InfoCaracteristicas{
+    margin-bottom: 25px;
+}
+
+.localizacao{
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.CategoriasFinais{
+    column-gap: 100px;
 }
 
 footer{
@@ -174,6 +192,28 @@ footer{
     padding-top: 10px;
     line-height: 1.5;
 
+}
+
+.botaoMenuPlantas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'inter', sans-serif;
+    text-decoration: none;
+    color: black;
+    background-color: #F0F1E7;
+    border-radius: 100px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: inset 0px 5px 6px -4px rgba(30, 30, 30, 0.08);
+}
+
+.Busca{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 #status-text{
@@ -205,13 +245,14 @@ footer{
 }
 
 #botaoQRCode {
-    border-radius: 0;
+    border-radius: 40px;
     justify-content: center;
     padding: 120pt;
     position:absolute;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #1D4710;
+    background-color: #F0F1E7;
+    box-shadow: inset 0px 5px 6px -4px rgba(30, 30, 30, 0.08);
 }
 /* QR Code (Código do Matheus, boa parte não olhei muito só coloquei no site Ass.:Gabriel T.) */
 
