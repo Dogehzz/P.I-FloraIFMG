@@ -19,6 +19,19 @@ $(document).ready(function() {
         ajustarLogo();
     });
 });
+
+function AbreMenu() {
+    if ($('#MenuSanduicheItens').css('display') === 'none') {
+        $('#MenuSanduicheItens').css('display', 'block');
+    } else {
+        $('#MenuSanduicheItens').css('display', 'none');
+    }
+
+}
+
+
+
+
 // Confirmar click para ativar o scanner do QR Code
 
 function BotaoQRCode() {
