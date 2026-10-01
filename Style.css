@@ -7,7 +7,9 @@ html, body{
     padding: 0;
     max-width: 100%;
     overflow-x: hidden;
-    min-height: 100vh; 
+    min-height: 100vh;
+    min-height: 100dvh; 
+
     display: flex;
     flex-direction: column;
 }
@@ -24,7 +26,6 @@ header{
     align-items: center;
     justify-content: space-between;
     position: relative;
-    z-index: 10001;
 }
 
 menu{
@@ -94,7 +95,7 @@ h1{
     padding: 0;
 }
 
-nav{
+.botaoBusca{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,15 +245,22 @@ footer{
     padding: 25px;
     width: 300px;
     box-shadow: inset 0px 5px 6px -4px rgba(30, 30, 30, 0.08);
+    cursor: pointer;
+}
+
+button.botaoMenuPlantas{
+    border: none;
+    justify-content: space-between;
+    
 }
 
 .Busca{
-
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px;
 }
+
 
 #status-text{
     text-align: center;
@@ -268,9 +276,12 @@ footer{
     color: #ffffff;
 }
 
-#SetaIndex, .SetaIndex, header{
+#SetaIndex, .SetaIndex{
     pointer-events: auto !important;
+    position: relative;
+    z-index: 10001;
 }
+
 
 .qr-container-wrapper {
     position: relative;

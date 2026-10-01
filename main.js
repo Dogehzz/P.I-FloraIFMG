@@ -37,7 +37,7 @@ function AbreMenu() {
 function BotaoQRCode() {
     if (html5Qrcode) return;
 
-    // 1. O código HTML do seu scanner (com a última div fechada corretamente)
+    // 1. O código HTML do scanner
     var codigoScanner = `
 
         <div class="scanner-target">
@@ -169,3 +169,14 @@ if (uploadBtn && fileInput) {
     });
 }
 
+//Busca no catálogo
+
+function BotaoBusca() {
+    var Busca = `
+        <input type="text" id="inputBusca" placeholder="Buscar planta...">
+    `;
+
+    $('#ContainerBusca').html(Busca);
+
+    $('#botaoBusca').remove();
+}
