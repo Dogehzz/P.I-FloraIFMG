@@ -180,3 +180,143 @@ function BotaoBusca() {
 
     $('#botaoBusca').remove();
 }
+
+
+
+
+
+
+
+
+//autocomplete
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//autocomplete do Matheus quie eu não consigo mexer
+
+/*
+
+//Agora a pior parteeee(Auto complete) (tentar a logica do py )
+const buscarInput = document.getElementById("campo_busca");
+const completa= document.getElementById("auto_complete");
+const listaPlantas = document.getElementById("Lista_Plantas");
+const itensLi = listaPlantas.querySelectorAll('li');
+//.trim() limpa espaços invisiveis,map passa os itens e tranforma em outra coisa,li.textContent ignora as tags
+const plantas = Array.from(itensLi).map(li => li.textContent.trim());
+function FiltrarPlantas(){
+    //toLowerCase deixa tudo minusculo 
+    const TextoDigitado = buscarInput.value.toLowerCase();
+    //redesenha a lista
+    listaPlantas.innerHTML = '';
+     // Se o input estiver vazio, esconde a caixinha e para a função
+    if (TextoDigitado === ""){
+        completa.style.display = 'none';
+        return ;
+    }
+    //filter apssa em todos os itens, planta => significa para cada planta, o includes() olha se oque foi digitado é o mesmo inicio das plantas na lista/ul
+    const plantasFiltradas = plantas.filter(planta => 
+        planta.toLowerCase().includes(TextoDigitado)
+    );
+    //se achou alguma planta
+    if (plantasFiltradas.length > 0) {
+        plantasFiltradas.forEach(planta => {
+            //cria ula li que corresponde com oque foi digitado
+            const li = document.createElement('li');
+            li.textContent = planta;
+          // Evento: Quando clicar na planta, ela vai para o input
+            li.addEventListener('click', () => {
+                buscarInput.value = planta;
+                completa.style.display = 'none'; // Esconde a lista
+            });
+            listaPlantas.appendChild(li);
+        });
+        completa.style.display = 'block'; 
+        } else {
+         // ESCONDE a lista se o filtro não encontrar nenhuma planta
+            completa.style.display = 'none';
+        //essa chave fecha o if
+    }
+}
+buscarInput.addEventListener('input', FiltrarPlantas);
+// Pega a ul pelo queryselector
+const lista = document.querySelector('#auto_complete ul');
+
+//  Transforma os itens da (li) em uma lista que pro Js  mexer
+const itens = Array.from(lista.querySelectorAll('li'));
+//Ordena as plantas de A a Z  (ignora maiúsculas e acentos por causa do Sensitivity:base)
+// o sort() organiza a fila com base no  Sensitivity:base
+//localeCompare compara o a e o b
+itens.sort((a, b) => {
+    return a.textContent.localeCompare(b.textContent, 'pt-BR', { sensitivity: 'base' });
+});
+// Apaga a ordem antiga da tela
+// inner muda todo o conteúdo para vazio 
+lista.innerHTML = '';
+
+//Coloca as plantas de volta, agora na ordem alfabética certinha
+itens.forEach(item => lista.appendChild(item));
+//aparecer apenas a  planta digitada
+const pesquisa = document.getElementById("caixa_pesquisa");
+const idPlanta = ["duranta erecta","adenium","psidium guajava l","mangifera indica l"]
+const plantasMinusculo = idPlanta.map(planta => planta.toLowerCase());
+pesquisa.addEventListener('input', () => {
+    const textoDigitado = pesquisa.value.toLowerCase().trim();
+    listaPlantas.forEach(idPlanta => {
+        const elemento = document.getElementById(idPlanta);
+
+if (elemento) {
+    if (textoDigitado === "") {
+        elemento.style.display = 'flex';
+    } 
+        // Se o ID da planta for IGUAL ao que foi digitado, REMOVE 'escondido' (o elemento fica)
+        // Se for DIFERENTE, ADICIONA 'escondido' (o elemento some)
+    else if (idPlanta.toLowerCase().trim().startsWith(textoDigitado)){
+        elemento.style.display = 'flex';
+    }
+    else {
+        elemento.style.display = 'none';
+    }
+}
+    });    
+});
+
+*/
