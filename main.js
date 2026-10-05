@@ -173,7 +173,7 @@ if (uploadBtn && fileInput) {
 
 function BotaoBusca() {
     var Busca = `
-        <input type="text" id="inputBusca" placeholder="Buscar planta...">
+        <input type="text" id="inputBusca" class="botaoMenuPlantas" placeholder="Buscar planta...">
     `;
 
     $('#ContainerBusca').html(Busca);
