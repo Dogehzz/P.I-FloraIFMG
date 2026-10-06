@@ -385,7 +385,6 @@ button.botaoMenuPlantas{
     height:100% !important;
     object-fit: cover !important;
     transform: scaleX(-1); /* para inverter o Efeito espelho da biblioteca qr code  */
-    -webkit-transform: scaleX(-1);
 }
 /* Oculta textos e botões injetados por padrão pela biblioteca */
 #reader button, #reader select, #reader span, #reader header {
