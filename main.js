@@ -123,7 +123,7 @@ const config = {
         return { width: 320, height: 320 }; 
     },
     aspectRatio: 1.0
-    disableFlip: false 
+    
 };
 
 // EVENTOS DO BOTÃO DE UPLOAD (SISTEMA TOTALMENTE ISOLADO)
