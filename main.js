@@ -76,7 +76,9 @@ function BotaoQRCode() {
         { facingMode: "environment" },
         config,
         onScanSuccess
-    ).catch(err => {
+    ).then(() => {
+        removerEspelho();
+    }).catch(err => {
         console.error("Erro ao iniciar a câmera:", err);
         statusText.innerText = window.isSecureContext
             ? "Não foi possível acessar a câmera. Verifique a permissão do navegador."
@@ -113,6 +115,27 @@ function onScanSuccess(decodedText, decodedResult) {
         processarResultado(decodedText);
     }).catch(() => {
         processarResultado(decodedText);
+    });
+}
+
+function removerEspelho() {
+    const video = document.querySelector('#reader video');
+    if (!video) return;
+
+    const aplicar = () => {
+        // só mexe se ainda não estiver forçado, para não entrar em loop
+        if (video.style.transform !== 'none' ||
+            video.style.getPropertyPriority('transform') !== 'important') {
+            video.style.setProperty('transform', 'none', 'important');
+        }
+    };
+
+    aplicar();
+
+    // se a biblioteca tentar espelhar de novo, desfaz
+    new MutationObserver(aplicar).observe(video, {
+        attributes: true,
+        attributeFilter: ['style']
     });
 }
 
