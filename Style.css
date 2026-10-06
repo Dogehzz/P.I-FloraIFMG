@@ -149,9 +149,12 @@ p{
 }
 
 .subtitulomenor{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 900;
+    font-size: 15px;
+}
+
+.subtitulomenor b{
+    font-weight: 800;
+    font-size: 15px;
 }
 
 .subtitiloestatico{
@@ -163,6 +166,10 @@ p{
     border-left: 2px solid #6B6B6B;
     padding: 0;
 
+}
+
+.espacamento p{
+    margin-bottom: 25px;
 }
 
 .CategoriasIniciais{
@@ -218,6 +225,32 @@ p{
 .CategoriasFinais{
     column-gap: 100px;
 }
+
+.estatico .titulopag{
+    font-style: normal;
+}
+
+
+
+.estatico span{
+    color: #000000;    
+}
+
+.DevDesign{
+    display: flex;
+}
+
+.Coluna{
+    flex: 1;
+    border: 1px solid #ccc;
+    
+}
+
+.Coluna p{
+    font-size: 20px;
+}
+
+
 
 footer{
     background-color: #2d541a;
