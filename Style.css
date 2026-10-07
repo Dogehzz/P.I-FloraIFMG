@@ -60,6 +60,14 @@ li{
     width: 180px;
 }
 
+.estatico li{
+    width: auto;
+}
+
+h2{
+    margin-right: 10px;
+}
+
 li a{
     font-size: 21px;
     
@@ -157,9 +165,13 @@ p{
     font-size: 15px;
 }
 
-.subtitiloestatico{
+.subtituloestatico{
     font-size: 10px;
     font-weight: 400;
+}
+
+.estatico .subtituloestatico{
+    font-size: 15px;
 }
 
 .categoria{
@@ -238,19 +250,36 @@ p{
 
 .DevDesign{
     display: flex;
+    flex-direction: column;
 }
 
-.Coluna{
-    flex: 1;
-    border: 1px solid #ccc;
-    
+.LinhaEquipe{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.Coluna p{
+.LinhaEquipe p{
     font-size: 20px;
+    margin: 15px 10px;
 }
 
+.LinhaEquipe .Nome,
+.LinhaEquipe .Funcao{
+    flex: 1;
+}
 
+.LinhaEquipe .Funcao{
+    color: #6B6B6B;
+}
+
+.LinhaEquipe.Cabecalho p{
+    font-weight: 800;
+}
+
+.LinhaEquipe.Cabecalho .Funcao{
+    color: #000000;
+}
 
 footer{
     background-color: #2d541a;
